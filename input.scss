@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  background-color: #111;
+  color: #ffffff;
+}
+
+.bgVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+// 절대값으로 위치를 고정
+
+main {
+  position: fixed;
+  z-index: 2;
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.time {
+  font-weight: bold;
+  font-size: 100px;
+  color: skyblue;
+  border: 10px dotted violet;
+}
+
+// z-index 만 하면 안 되고, position fixed를 해줘야함
+// z가 들어가면 3D로 생각해야 된다. z-index 값이 높을 수록 앞 쪽에 배치가 된다
+// justify-content는 세로 축에서 가운데 값을 입력하였고, align-items 에서 정중앙을 맞춰주었다.
+// 글자 사이 관련 css = letter-spacing
