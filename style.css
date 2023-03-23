@@ -23,12 +23,31 @@ main {
   justify-content: center;
   align-items: center;
 }
-
-.time {
+main .time {
   font-weight: bold;
   font-size: 100px;
   color: skyblue;
   border: 10px dotted violet;
+}
+main .quotes {
+  position: relative;
+  font-size: 60px;
+}
+main .quotes .quotesAddBtn {
+  display: none;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  border-radius: 14px;
+  background-color: transparent;
+  cursor: pointer;
+}
+main .quotes:hover .quotesAddBtn {
+  display: inline-block;
+}
+main .newQuotes {
+  display: none;
 }
 
 /*# sourceMappingURL=style.css.map */

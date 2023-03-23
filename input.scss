@@ -25,13 +25,39 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
 
-.time {
-  font-weight: bold;
-  font-size: 100px;
-  color: skyblue;
-  border: 10px dotted violet;
+  .time {
+    font-weight: bold;
+    font-size: 100px;
+    color: skyblue;
+    border: 10px dotted violet;
+  }
+
+  .quotes {
+    position: relative;
+    font-size: 60px;
+    .quotesAddBtn {
+      display: none;
+      position: absolute;
+      top: 50%;
+      right: 50%;
+      transform: translate(50%, -50%);
+      border-radius: 14px;
+      background-color: transparent;
+      cursor: pointer;
+    }
+    // top, right 만 주면 quotes 정 가운데에 위치하지 않으니, transform을 사용하여 정중앙에 위치하도록 한다.
+
+    &:hover {
+      .quotesAddBtn {
+        display: inline-block;
+      }
+    }
+  }
+
+  .newQuotes {
+    display: none;
+  }
 }
 
 // z-index 만 하면 안 되고, position fixed를 해줘야함
