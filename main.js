@@ -114,3 +114,76 @@ function onClickRegist() {
 
   console.log(newQuotesInput.value);
 }
+
+// const a = {
+//   question: "질문입니다.",
+// };
+
+// const b = {
+//   question: question,
+// };
+
+// const c = {
+//   question,
+// };
+
+// 3단계에 걸쳐서 수정 가능하다?
+
+let isLoading = false;
+
+async function onClickSearch() {
+  const searchInput = document.querySelector(".searchInput");
+  const searchResult = document.querySelector(".searchResult");
+
+  if (!searchInput.value) return;
+  if (isLoading) return;
+
+  // 여기까지옴 === isLoading false
+
+  isLoading = true;
+
+  const question = searchInput.value;
+  // 코드가 한 줄로 끝나면 중괄호 생략 가능하다
+
+  searchInput.value = "검색 중 입니다... 잠시만 기다려주세요.";
+
+  console.log("Chat GPT is online");
+
+  // 프론트엔드에서 백엔드로 보내는 코드
+  const response = await axios.post(
+    "https://holy-fire-2749.fly.dev/chat",
+    {
+      question,
+    },
+    {
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: "Bearer BLOCKCHAINSCHOOL3",
+      },
+    }
+  );
+
+  if (response.status === 200) {
+    searchResult.style.display = "inline";
+    searchResult.innerText = response.data.choices[0].message.content;
+  }
+
+  searchInput.value = "";
+  isLoading = false;
+}
+
+function onClickToggle(value) {
+  const nft = document.querySelector(".nft");
+  const nftView = document.querySelector(".nftView");
+
+  if (value) {
+    nft.style.display = "inline-block";
+    nftView.style.display = "none";
+  } else {
+    nft.style.display = "none";
+    nftView.style.display = "inline-block";
+  }
+}
+
+// 155 노란 중괄호 안에 console.log 입력하게 되면 백엔드에서 받는 내용으로 나와야되니 143 await와 132 async를 입력하였다
+// value를 입력해야 웹 상에 입력한 값이 나온다
