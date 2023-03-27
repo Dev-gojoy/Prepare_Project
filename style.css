@@ -40,6 +40,7 @@ main .time {
 main .quotes {
   position: relative;
   font-size: 60px;
+  font-weight: bold;
 }
 main .quotes .quotesAddBtn {
   display: none;
@@ -57,10 +58,22 @@ main .quotes:hover .quotesAddBtn {
 main .newQuotes {
   display: none;
 }
+main .newQuotes .newQuotesInput {
+  font-weight: bold;
+  border-radius: 12px;
+}
+main .newQuotes .newQuotesButton {
+  font-weight: bold;
+  border-radius: 12px;
+}
 main .search .searchLogo {
   width: 32px;
   height: 32px;
   animation: spin 1s linear infinite;
+}
+main .search .anyQuestion {
+  font-size: 20px;
+  font-weight: bold;
 }
 main .searchResult {
   display: none;

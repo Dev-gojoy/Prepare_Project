@@ -45,6 +45,7 @@ main {
   .quotes {
     position: relative;
     font-size: 60px;
+    font-weight: bold;
     .quotesAddBtn {
       display: none;
       position: absolute;
@@ -66,6 +67,15 @@ main {
 
   .newQuotes {
     display: none;
+
+    .newQuotesInput {
+      font-weight: bold;
+      border-radius: 12px;
+    }
+    .newQuotesButton {
+      font-weight: bold;
+      border-radius: 12px;
+    }
   }
 
   .search {
@@ -74,6 +84,11 @@ main {
       height: 32px;
 
       animation: spin 1s linear infinite;
+    }
+
+    .anyQuestion {
+      font-size: 20px;
+      font-weight: bold;
     }
   }
 
